@@ -7,7 +7,7 @@ import time
 
 #指定你的chrome路徑
 chromePath = '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome' # for macos
-#chromePath = r'Program Files (x86)\Google\Chrome\Application\chrome.exe' # for windows
+#chromePath = r'C\Program Files (x86)\Google\Chrome\Application\chrome.exe' # for windows
 email = 'titus.leo616@gmail.com'
 name = '郭彥明'
 student_id = '16'
