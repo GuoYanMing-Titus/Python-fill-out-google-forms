@@ -4,6 +4,8 @@ import time
 自動開啟網頁，並填入google表單內容，開啟後確認輸入是否正確，按送出表單即可
 簽到直接使用時間進行判斷，稍微檢查是否勾選正確即可。
 '''
+#
+url_viewform = 'https://docs.google.com/forms/%%%%%%%%%%%%%%%%%%%%%%%%%%/viewform'
 
 #指定你的chrome路徑
 chromePath = '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome' # for macos
@@ -50,8 +52,7 @@ def main():
     time_stamp, time_struct, time_str = get_time_info(t_now,t0,t1,t2)
     today_date = time_str[t_now].split(' ')[0]
     sign_type = get_sign_type(time_stamp)
-    url = 'https://docs.google.com/forms/d/e/1FAIpQLScyj-cxY3QSgqXyQn-UNd06nhDGSfdtJtUk0QFPL7Fvlx2Fgg/viewform?'\
-                f'entry.947274367={student_id}&entry.1397597325={name}&entry.1895033237={note}'\
+    url = url_viewform + f'?entry.947274367={student_id}&entry.1397597325={name}&entry.1895033237={note}'\
                 f'&entry.750854324={today_date}&entry.1235639024={sign_type}&emailAddress={email}'
 
     #註冊Chrome 瀏覽器
